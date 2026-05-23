@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Trillium Innotech for restaurant POS solutions in Canada.">
+    <title>Contact | Trillium Innotech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header light" data-header>
+      <a class="brand" href="index.html" aria-label="Trillium Innotech home"><span class="logo-slot header-logo-slot">Logo</span><span>Trillium Innotech</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="pos.html">POS</a><a href="functions.html">Functions</a><a href="service.html">Service</a><a href="about.html">About</a><a class="nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="contact page-contact">
+        <div class="section-inner contact-stack">
+          <div class="contact-intro">
+            <p class="eyebrow">Contact</p>
+            <h1>Let's find a robust, reliable, and affordable POS setup for your business.</h1>
+            <p>Tell us what you run, what you need, and what is slowing your team down. We will help you find a practical path forward.</p>
+          </div>
+          <div class="contact-lower">
+            <div class="contact-details">
+              <div class="contact-methods" aria-label="Contact details">
+                <a href="tel:0000000000"><span>Phone</span><strong>000-000-0000</strong></a>
+                <a href="https://www.trilliuminotech.com"><span>Website</span><strong>www.trilliuminotech.com</strong></a>
+                <a href="mailto:hello@trilliuminotech.com"><span>Email</span><strong>hello@trilliuminotech.com</strong></a>
+              </div>
+            </div>
+            <form class="contact-form" action="/api/contact" method="post" aria-label="Contact form" data-contact-form>
+              <label><span>Name</span><input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+              <label><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required></label>
+              <label><span>Restaurant</span><input type="text" name="restaurant" placeholder="Restaurant name"></label>
+              <label><span>Message</span><textarea name="message" rows="4" placeholder="What would you like to improve?" required></textarea></label>
+              <button class="button primary" type="submit">Send Inquiry</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>Trillium Innotech</span><span>Restaurant technology for Canadian hospitality.</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
