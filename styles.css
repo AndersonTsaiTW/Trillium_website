@@ -104,43 +104,10 @@ p {
   font-weight: 900;
 }
 
-.logo-slot {
-  display: grid;
-  place-items: center;
-  border: 1px dashed rgba(255, 255, 255, 0.45);
-  border-radius: 8px;
-  color: currentColor;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  position: relative;
-  overflow: hidden;
-}
-
-.logo-slot::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--gold) 0 30%, var(--aqua) 30% 58%, var(--blue-slate) 58% 100%);
-  opacity: 0.24;
-}
-
-.logo-slot {
-  isolation: isolate;
-}
-
-.header-logo-slot {
-  width: 48px;
+.header-logo {
   height: 32px;
-  font-size: 0.6rem;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.site-header.light .header-logo-slot,
-.site-header.is-scrolled .header-logo-slot {
-  color: var(--ocean);
-  background: var(--white);
-  border-color: rgba(6, 55, 91, 0.18);
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -164,7 +131,7 @@ p {
 
 .hero {
   position: relative;
-  min-height: 82vh;
+  height: 100vh;
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -195,6 +162,7 @@ p {
   width: min(720px, calc(100% - 40px));
   margin-left: clamp(20px, 6vw, 78px);
   padding-top: 54px;
+  padding-bottom: 72px;
 }
 
 .hero h1 {
@@ -227,10 +195,10 @@ p {
   backdrop-filter: blur(8px);
 }
 
-.hero-logo-slot {
-  width: 92px;
-  height: 50px;
-  font-size: 0.68rem;
+.hero-logo {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .logo-reserve-text {
@@ -253,18 +221,23 @@ p {
 .trust-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
+  align-items: center;
+  gap: 0;
+  margin-top: 24px;
 }
 
 .trust-strip span {
-  padding: 8px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.8rem;
-  font-weight: 800;
+  padding: 4px 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.trust-strip span:first-child {
+  border-left: none;
+  padding-left: 0;
 }
 
 .hero-actions {
@@ -331,6 +304,10 @@ p {
 
 .feature-layout {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feature-layout.stack {
+  grid-template-columns: 1fr;
 }
 
 .feature-card {
@@ -674,7 +651,7 @@ p {
   }
 
   .hero {
-    min-height: 78vh;
+    height: 100svh;
   }
 
   .hero-overlay {
