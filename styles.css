@@ -107,6 +107,7 @@ p {
 .header-logo {
   height: 32px;
   width: auto;
+  max-width: none;
   display: block;
 }
 
