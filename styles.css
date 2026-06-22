@@ -354,13 +354,34 @@ p {
   gap: 12px;
 }
 
-.check-list p {
-  padding: 15px 18px;
+.check-item {
   border-left: 4px solid var(--aqua);
   background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 10px 26px rgba(6, 55, 91, 0.06);
+  overflow: hidden;
+  cursor: default;
+}
+
+.check-list p {
+  padding: 15px 18px;
   color: var(--ink);
   font-weight: 800;
+}
+
+.check-desc {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  transition: max-height 300ms ease, padding 300ms ease;
+}
+
+.check-item:hover .check-desc {
+  max-height: 60px;
+  padding: 0 18px 14px;
 }
 
 .warranty-strip {
